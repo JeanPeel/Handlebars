@@ -15,7 +15,7 @@ function printQuestionMarks(num) {
 
 function objToSql(ob) {
     // column1 = value, column2 = value2, ...
-    var arr [];
+    var arr = [];
 
     for (var key in ob) {
         arr.push(key + '=' + ob[key]);
@@ -25,7 +25,7 @@ function objToSql(ob) {
 }
 
 var orm = {
-    all; function(tableInput, cd) {
+    all: function(tableInput, cd) {
         var queryString = 'SELECT * FROM ' + tableInput + ';';
         connection.query(queryString, function(err,result) {
             if (err) {
