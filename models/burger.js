@@ -1,7 +1,7 @@
 var express = require ('express');
 
 var router = express.Router();
-var burger = require('../mopdels/burger.js');
+var burger = require('../models/burger.js');
 
 // get rout -> index
 router.get('/', function(req, res) {
