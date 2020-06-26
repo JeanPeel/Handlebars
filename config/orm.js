@@ -57,13 +57,13 @@ var orm = {
     },
     // objColVals would be the columns and values that you want to update
     // an example of objColVals would be {name: panther, sleepy: true}
-    update: function(table, objColVals, condtion, cb) {
+    update: function(table, objColVals, condition, cb) {
         var queryString = 'UPDATE' + table;
 
         queryString += ' SET ';
         queryString += objToSql(objColVals);
         queryString += ' WHERE ';
-        queryString += CSSConditionRule;
+        queryString += condition;
 
         console.log(queryString);
         connection.query(queryString, function (err, result) {
@@ -75,4 +75,4 @@ var orm = {
     }
 };
 
-module.exports = orm;
+module.exports = {orm};
